@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- para moviles -->
+ <title>Precios - tus mejores guitarras!!</title>
+ <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,700" rel="stylesheet">
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="precios">
+  <header id="header" class="header background"> <!-- header -->
+  	<div class="contenedor">
+	    <figure class="logotipo">
+	      <img src="images/invie.png" whidth='186' height='60' alt="Invie-Logotipo"/>
+	    </figure>
+      <span id="burger-button" class="burger-button icon-menu"></span>
+
+	    <nav id="menu" class="menu">
+	      <ul>
+	        <li><a href="index.html">Home</a></li>
+	        <li><a href="index.html#guitarras">Guitarras</a></li>
+	        <li><a href="precios.html">Precio</a></li>
+	      </ul>
+	    </nav>
+  	</div>
+  </header>
+
+	<section class="tabla">
+		<div class="contenedor">
+			<table> <!-- tabla -->
+				<thead> <!-- cabecera -->
+					<tr> <!-- Fila -->
+						<th>Modelo</th> <!-- Celda cabecera -->
+						<th>Precio</th>
+						<th>Descripción</th>
+            <th>Modelo</th> <!-- Celda cabecera -->
+            <th>Precio</th>
+            <th>Descripción</th>
+					</tr>
+				</thead>
+				<tbody> <!-- cuerpo -->
+					<tr>
+						<td>Invie Classic</td> <!-- Celda normal -->
+						<td>$100000</td>
+						<td>Una guitarra muy pro</td>
+            <td>Invie Classic</td> <!-- Celda normal -->
+            <td>$100000</td>
+            <td>Una guitarra muy pro</td>
+					</tr>
+					<tr>
+						<td>Invie Classic</td> <!-- Celda normal -->
+						<td>$100000</td>
+						<td>Una guitarra muy pro</td>
+            <td>Invie Classic</td> <!-- Celda normal -->
+            <td>$100000</td>
+            <td>Una guitarra muy pro</td>
+					</tr>
+					<tr>
+						<td>Invie Classic</td> <!-- Celda normal -->
+						<td>$100000</td>
+						<td>Una guitarra muy pro</td>
+            <td>Invie Classic</td> <!-- Celda normal -->
+            <td>$100000</td>
+            <td>Una guitarra muy pro</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<footer class="footer ">
+    <div class="contenedor">
+      <div class = "contacto">
+        <img src="images/invie-white.png" alt="logotipo blanco"/>
+        <div class="contacto1">
+          <a href="tel:+573127470718"><strong>Telenofo:</strong> <span> 312 747 0718</span></a><!-- llamar con un clic -->
+          <a href="mailto:jhonny.agudelo3120@gmail.com"><strong>E-mail:</strong> <span>jhonny.agudelo3120@gmail.com</span></a>
+        </div>
+        </div>
+
+      <form class="formulario">
+        <div class="col1">
+          <label for="nombre">Nombre</label>
+            <input type="text" required placeholder="Coloca tu nombre" id="nombre" name="nombre"/>
+          <label for="email">E-mail</label>
+            <input type="email" required id="email" name="email" />
+
+          <div class="sexo">
+            <label for="mujer">
+              <input type="radio" id="mujer" checked name="sexo" value="mujer">Mujer
+            </label>
+            <label for="hombre">
+              <input type="radio" id="hombre" name="sexo" value="hombre">Hombre
+            </label>
+          </div>
+
+          <div class="intereses">
+            <label for="cotizacion">
+              <input type="checkbox"  checked id="cotizacion" name="intereses " value="cotizacion"/>Cotización
+            </label>
+            <label for="reclamos">
+              <input type="checkbox" id="reclamos" name="intereses" value="reclamos"/>Reclamos
+            </label>
+            <label for="comentarios">
+              <input type="checkbox" id="comentarios" name="intereses" value="comentarios"/>Comentarios
+            </label>
+            <label for="otros">
+              <input type="checkbox" id="otros" name="intereses" value="otros"/>Otros
+            </label>
+          </div>
+        </div>
+
+        <div class="col2">
+          <label for="comentario">Comentarios</label>
+          <textarea name="comentario" id="comentario" cols="30" rows="7"></textarea>
+          <input class="boton" type="submit" value="Enviar">
+      	</div>
+
+      </form>
+    </div>
+  </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+    <script>
+    var consulta = window.matchMedia('(max-width:800px)');
+    consulta.addListener(mediaQuerry);
+
+
+    var $burgerButton = document.getElementById('burger-button');
+    var $menu = document.getElementById('menu');
+
+
+    function toggleMenu(){
+    $menu.classList.toggle('active');
+    };
+          // colocar menu
+    function showMenu(){
+    $menu.classList.add('active');
+    };
+      // quitar menu
+    function hideMenu(){
+    $menu.classList.remove('active');
+    };
+
+
+    function mediaQuerry(){
+      if(consulta.matches){
+        console.log('se cumplio')
+        $burgerButton.addEventListener('touchstart',toggleMenu);
+
+      }else{
+        $burgerButton.removeEventListener('touchstart',toggleMenu);
+        console.log('no')
+      }
+    }
+
+    mediaQuerry();
+
+    // lazy loading
+    var bLazy = new Blazy({
+      selector:'img'
+    });
+
+
+    // gestos
+    var $body = document.body;
+
+    var gestos = new Hammer($body);
+    gestos.on('swipeleft', hideMenu);
+    gestos.on('swiperight',showMenu);
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,598 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?7pnf1e');
+  src:  url('../fonts/icomoon.eot?7pnf1e#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7pnf1e') format('truetype'),
+    url('../fonts/icomoon.woff?7pnf1e') format('woff'),
+    url('../fonts/icomoon.svg?7pnf1e#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-mail3:before {
+  content: "\ea85";
+}
+
+
+
+
+/*selector universal
+*{
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid red;
+}*/
+
+
+body{
+  font-family: 'Allerta', sans-serif;
+  margin: 0;
+}
+
+table{
+  width: 100%;
+}
+
+th{
+  background:#273b47;
+  color:white;
+  padding:10px 20px;
+  text-align: left;
+}
+
+table,td,th{
+  border:1px solid #273b47;
+  border-collapse: collapse; /*quitar la doble linea*/
+}
+
+td{
+  padding: 20px;
+}
+
+input,textarea{
+  outline: 0;
+}
+
+input:focus, textarea:focus {
+  background: #CCC2C2;
+}
+
+.contenedor{
+  margin: auto;
+  max-width: 800px;
+  position: relative;
+  width: auto;
+}
+
+.background{
+  background-image: url('../images/background.png');
+  background-size: cover;  /*expandir imagen*/
+}
+
+.titulo{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  margin-bottom: 0;
+  margin-top: 70px;
+}
+.title-a{
+  font-size: 24px;
+  margin-top: 0;
+ }
+
+.guitarras{
+  color:#1F313C;
+  margin-bottom:60px;
+}
+.guitarras h2{   /*selector desendente*/
+  font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
+ }
+
+.guitarra{
+  border: 1px solid #1F313C;
+  margin: 10px 10px 30px 10px;
+  /*overflow: hidden;*/
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.guitarra ol{
+  padding: 0;
+}
+
+.guitarra.b{
+height: 190px;
+}
+
+.right{
+  float: right;
+  position: relative;
+  top: -127px;
+}
+
+.left{
+  float: left;
+  position: relative;
+}
+.title-b{
+  font-size: 50px;
+  margin-bottom: 20px;
+ }
+
+.portada{
+  color:white;
+  padding: 20px;
+  height: 500px;
+}
+
+.portada button{
+  margin-bottom: 70px;
+}
+
+.menu{
+  display: inline-block;
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+}
+
+.menu li{
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.menu li:before{   /*seudoelemento*/
+  /*font-size: 30px;*/
+  color:white;
+  content:'∘';
+  line-height: 20px; /*alto de linea*/
+}
+
+.menu a{
+  color:white;
+  text-decoration: none;
+
+}
+
+.logotipo{
+  display: inline-block;
+  margin-left: 0;
+}
+
+.contenedor-guitarra-a{
+  padding-left: 20px;
+}
+
+.contenedor-guitarra-b{
+  margin-left: 370px;
+  position: relative;
+  bottom: 90px;
+
+}
+
+.header{
+  position: relative;
+}
+
+.boton{
+  /*background: #fd324e;*/
+  background: linear-gradient(to left, #fe344e,#ff7250 ); /*degradado*/
+  border-radius: 12px;
+  border: none;
+  color:white;
+  cursor: pointer; /*dibujo del cursor*/
+  font-size: 18px;
+  padding: 7px;
+  text-decoration: none;
+}
+
+.footer{
+  background: #273b47;
+  padding: 50px 10px;
+}
+
+.footer .contenedor{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacto{
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+/*.contacto1{
+  margin-bottom:100px;
+}*/
+
+
+.contacto img{
+  display: block;
+  /*margin-top: 20px;*/
+}
+
+.contacto strong{
+  display: block;
+  margin-top: 10px;
+}
+
+.contacto a{
+  color:white;
+  text-decoration: none;
+  margin: 10px, 10px, 10px, 0;
+}
+
+.formulario{
+  color:white;
+  display: flex;
+  width: 400px;
+
+}
+
+.formulario label, .sexo, .intereses{
+  margin-bottom: 10px;
+}
+.col1, .col2{
+  display: flex;
+  flex-direction: column;
+}
+
+.col1{
+  margin-right: 15px;
+  margin-left: -45px;
+}
+
+.col2{
+  align-items: flex-start;
+}
+
+.col2 .boton{
+  margin-top: 15px;
+}
+
+.intereses label{
+  font-size: 12px;
+}
+
+.sexo{
+  margin-top: 10px;
+}
+
+.titulo span{
+  text-decoration: underline;
+}
+
+.tabla{
+  margin:50px 0;
+}
+
+.burger-button{
+  background: #395667;
+  border-radius: 50%;
+  color:white;
+  cursor:pointer;
+  display: inline-block;
+  height: 40px;
+  left: 20px;
+  line-height: 40px;
+  position: fixed;
+  text-align: center;
+  top: 20px;
+  width: 40px;
+  z-index: 3;
+  display: none
+}
+
+.video-demo{
+  max-width: 500px;
+  width:100%;
+  /*margin-bottom: 80px;*/
+}
+
+.video-demo-contenedor{
+  display: flex;
+  justify-content: center;
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+  /*Precios Tabla*/
+  .tabla{
+    margin:50px 20px;
+
+  }
+  .tabla .contenedor{
+    overflow: auto;
+    border:1px solid #273b47;
+  }
+
+
+
+  /*portada*/
+  .titulo{
+    margin-top: 30px;
+    font-size: 45px;
+  }
+  .title-a{
+    font-size: 18px;
+  }
+
+  .portada{
+    height: auto;
+  }
+
+  .portada .boton{
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  .guitarras{
+    text-align: center;
+  }
+
+  .right, .left{
+    float: none;
+    position: static;
+  }
+
+  .title-b{
+    margin:0;
+  }
+
+  .guitarras li{
+    list-style: none;
+  }
+
+  .guitarra.b{
+    height: auto;
+  }
+
+  .video-demo-contenedor{
+    margin-bottom: 30px;
+  }
+
+  .contenedor-guitarra-b{
+    margin: 0;
+    position: static;
+  }
+
+  .contenedor-guitarra-a{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+      /*footer*/
+  .footer .contenedor{
+    display: block;
+  }
+
+  .contacto{
+    margin: 0 auto;
+  }
+
+  .formulario{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  .col1{
+    margin:0;
+    padding-top: 20px;
+  }
+
+  .intereses label{
+    display: block;
+    font-size: 16px;
+  }
+
+  .sexo label{
+    margin-right: 10px;
+  }
+
+  /*selector de atributo*/
+  input[type="text"],
+  input[type="email"]{
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  textarea{
+    width: 100%
+  }
+
+  input[type="checkbox"],
+  input[type="radio"]{
+    zoom: 1.5;
+    -moz-transform: scale(2);
+    margin-right: 8px;
+  }
+
+      /*footer*/
+}
+
+@media screen and (max-width: 650px){
+  .header{
+    text-align: center;
+  }
+
+  .logotipo{
+    margin: 0;
+  }
+
+  .menu{
+    position: static;
+    display: block;
+    /*text-align: center;*/
+  }
+
+  .menu li:first-child{   /*afecta solo al primero*/
+    margin:0;
+    /*border: 1px solid red;*/
+  }
+
+  .menu ul{
+    padding: 0;
+  }
+
+  .contacto span{
+    font-size: 13px
+  }
+
+  /*guitaras*/
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+        /*portada*/
+
+  .portada .boton{
+    display: block;
+    }
+
+  .precios .header .logotipo{
+    margin:50px 0;
+  }
+
+
+  .portada .contenedor{
+    position: static;
+  }
+
+  .header{
+    position: static;
+  }
+
+  .header .contenedor{
+    position: static;
+  }
+
+  .menu{
+    /*border:1px solid red;*/
+    background:rgba(255, 60, 88,0.8);
+    position: fixed;
+    left:-100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: .3s;
+  }
+
+  .menu.active{
+    left: 0;
+  }
+
+  .menu ul{
+    flex: 1;
+  }
+
+  .menu li{
+    display: block;
+    margin:0;
+    padding: 8px 0;
+    border-bottom: 1px solid white;
+  }
+
+  .menu li:before{
+    display: none
+  }
+
+  .menu li:first-child{
+    border-top:1px solid white;
+  }
+
+  .portada{
+    text-align: center;
+  }
+
+  .titulo{
+    font-size: 30px
+  }
+
+  .title-a{
+    font-size: 16px;
+  }
+      /*portada*/
+
+      /*guitarras*/
+
+  .guitarras img{
+    width:200px;
+    height: auto;
+  }
+
+  .video-demo-contenedor{
+    margin:0 10px 30px 10px;
+  }
+
+  .title-b{
+    font-size: 30px;
+  }
+
+  .burger-button{
+    display: block;
+  }
+
+
+      /*guitarras*/
+
+        /*footer*/
+
+  .col2{
+    align-items: stretch;
+  }
+
+        /*video*/
+
+  .video-responsive-contenedor{
+    position: relative;
+    padding-top: 56.25%;
+  }
+
+  .video-responsive-src{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}
